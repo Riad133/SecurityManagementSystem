@@ -11,10 +11,11 @@
 
 	<properties>
 		<springframework.version>5.0.2.RELEASE</springframework.version>
+        <springSecurity.version>5.0.0.RELEASE</springSecurity.version>
 
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-	</properties>
+	</properties> 
 
 	<dependencies>
 
@@ -50,6 +51,24 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+		
+		
+		<!-- Add Support for Spring Security dependency throw "spring-security-web" and "spring-security-config" -->
+		
+		<!-- Add "spring-security-web" dependency -->
+		
+		<dependency>
+          <groupId>org.springframework.security</groupId>
+          <artifactId>spring-security-web</artifactId>
+          <version>${springSecurity.version}</version>
+         </dependency>
+         
+         <!-- Add "spring-security-config" dependency -->
+         <dependency>
+           <groupId>org.springframework.security</groupId>
+           <artifactId>spring-security-config</artifactId>
+           <version>${springSecurity.version}</version>
+          </dependency>
 
 	</dependencies>
 
