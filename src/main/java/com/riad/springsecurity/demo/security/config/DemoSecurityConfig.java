@@ -28,7 +28,11 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		// TODO Auto-generated method stub
 		http.authorizeRequests()
-		    .anyRequest().authenticated()
+		    
+		    .antMatchers("/leaders/**").hasAnyRole("MANAGER")
+		    .antMatchers("/employees/**").hasAnyRole("EMPLOYEE")
+		    .and()
+		    .exceptionHandling().accessDeniedPage("/access-denied")
 		    .and()
 		    .formLogin()
 		    .loginPage("/showMyLoginPage")

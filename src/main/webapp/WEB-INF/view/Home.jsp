@@ -15,5 +15,11 @@
 <form:form action="${pageContext.request.contextPath}/logout" method="Post">
   <input type="submit" value="Logout"/>
 </form:form>
+
+<a href="${pageContext.request.contextPath}/leaders">LeaderShip Meeting </a>
+(Only for Manager people)
+<br>
+<a href="${pageContext.request.contextPath}/employees">LeaderShip Meeting </a>
+(Only for employees )
 </body>
 </html>

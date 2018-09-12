@@ -11,4 +11,16 @@ public class DemoController {
 	public String showHome() {
 		return "Home";
 	}
+	
+	
+	@GetMapping("/leaders")
+	public String showLeaders() {
+		return "LeadersPage";
+	}
+	@GetMapping("/employees")
+	public String showEmployes() {
+		return "EmployeesPage";
+	}
+	
+	
 }

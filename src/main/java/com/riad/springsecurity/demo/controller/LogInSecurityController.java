@@ -11,4 +11,10 @@ public class LogInSecurityController {
 		
 		return "LogIn/LoginBootPage";
 	}
+	
+	@RequestMapping("/access-denied")
+	public String ShowAccessDenied() {
+		
+		return "LogIn/access-denied-Page";
+	}
 }
